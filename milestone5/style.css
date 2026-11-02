@@ -38,10 +38,11 @@ main {
     grid-area: 2 / 2 / 2 / -2;
     top:0;
     z-index: 5;
-    display: flexbox;
+    display:grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 .box {
-    display: flexbox;
     background-color: #001B2C;
     color:white;
     width: 453px;
