@@ -21,9 +21,9 @@ nav {
     display: flex;
     background-color: var(--dark-blue);
     color:white;
-    grid-column: 1 /-1;
+    grid-column: 2 /-2;
     height:64px;
-    grid-row: 1;
+    grid-row: 2;
     justify-content: center;
     gap: 2rem;
     padding: 0.75rem 1.5rem;
