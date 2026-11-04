@@ -70,8 +70,10 @@ footer {
     top:0;
     z-index:10;
     margin:0px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 footer p {
-    justify-self: center;
-    align-self: center;
+    
 }
