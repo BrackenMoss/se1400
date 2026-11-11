@@ -35,11 +35,15 @@ nav {
     justify-content: space-around;
 }
 .menu-toggle {
-    transform: scale(.10);
+    font-size: 2rem;
+    background-color: transparent;
+    border: transparent;
+    color: #D9D9D9;
 }
 .menu-toggle:hover {
-    transform: scale(.15);
+    transform: scale(1.15);
 }
+
 nav a {
     display:none;
     padding: 16px 40px;
