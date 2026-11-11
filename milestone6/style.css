@@ -19,27 +19,34 @@ header {
 
 nav {
     display: flex;
-    background-color: var(--dark-blue);
+    background-color: rgba(3, 62, 102, 0.85);
     color:white;
-    grid-column: 2 /-2;
+    grid-column: 1 /-1;
     height:64px;
-    grid-row: 2;
+    grid-row: 1;
     align-items: center;
     border-style: hidden;
     gap: 32px;
-    padding: 12px 24px;
+    padding: clamp(.75rem, 1rem, 1.5rem);
     top:0;
     position: sticky;
     z-index: 10;
-    box-sizing: border-box;
+    font-size: clamp(1rem,1.5rem,2rem);
     justify-content: space-around;
-    font-size: 1.5rem;
+}
+.menu-toggle {
+    transform: scale(.10);
+}
+.menu-toggle:hover {
+    transform: scale(.15);
 }
 nav a {
+    display:none;
     padding: 16px 40px;
     border-style: solid;
     border-color: transparent;
     border-width: 2px;
+    font-size: clamp(1rem,1.5rem,2rem);
 }
 nav a:hover {
     background-color: #011726;
@@ -50,7 +57,7 @@ nav a:hover {
 main {
     background-color: var(--backgound-grey);
     padding:2rem;
-    grid-area: 2 / 2 / 2 / -2;
+    grid-area: 2 / 1 / 2 / -1;
     top:0;
     z-index: 5;
     display:grid;
@@ -64,7 +71,7 @@ main {
 .box {
     background-color: #001B2C;
     color:white;
-    width: clamp(100px,453px);
+    width: 300px;
 }
 .box h3 {
     background-color: #576771;
@@ -86,14 +93,53 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
-@media only screen and (min-width: 768px) {
+#hidden {
+    display:none;
+}
+#visible {
+    display: flex;
+}
+@media (min-width: 768px) {
+   
+main {
+grid-area: 2 / 2 / 2 / -2;
+}
+nav {
+    grid-column: 2 /-2;
+}
+.box {
+    width: 456px;
+}
 
 }
 
-@media only screen and (min-width: 992px) {
+@media (min-width: 992px) {
+nav a {
+    display:flex;
+}
+    .menu-toggle {
+        display: none;
+    }
     main {
     grid-template-columns: repeat(2,minmax(150px,1fr));
 
+    }
+    nav {
+    display: flex;
+    background-color: var(--dark-blue);
+    color:white;
+        grid-row: 2;
+            height:64px;
+    grid-row: 2;
+    align-items: center;
+    border-style: hidden;
+    gap: 32px;
+    padding: clamp(.75rem, 1rem, 1.5rem);
+    top:0;
+    position: sticky;
+    z-index: 10;
+    box-sizing: border-box;
+    justify-content: space-around;
+    font-size: clamp(1rem,1.5rem,2rem);
     }
 }
