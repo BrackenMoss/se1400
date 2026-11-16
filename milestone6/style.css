@@ -129,7 +129,12 @@ nav a {
     background-color: transparent;
     display:flex;
     padding: 16px 40px;
-    border-color:;
+}
+img {
+    max-width: 100%;
+    height:auto;
+    flex: 1 1 auto;
+    object-fit: cover;
 }
 .menu-toggle {
         display: none;
